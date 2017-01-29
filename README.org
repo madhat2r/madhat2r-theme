@@ -1,8 +1,6 @@
 #+TITLE: MaDhAt2r Theme
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="../../../css/readtheorg.css" />
 
-* MaDhAt2r Theme
-
 A fairly complete dark theme for (spac[e]macs), works well with 256 color terminals.
 
 ** Screenshots
