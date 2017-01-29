@@ -1,4 +1,4 @@
-;;; madhat2r-theme.el --- Color theme with a dark and light versions.
+;;; madhat2r-theme.el --- dark color theme for (spac[e]macs)
 
 ;; Copyright (C) 2015-2016 Micah Duke
 
