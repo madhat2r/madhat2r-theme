@@ -822,9 +822,9 @@
    ;;;;; flycheck
 
    `(flycheck-error
-            ((,(append '((supports :underline (:style line))) class)
+     ((,(append '((supports :underline (:style line))) madhat2r-class)
             (:underline (:style line :color ,err)))
-              (,class (:foreground ,base :background ,err :inherit bold :underline t))))
+              (,madhat2r-class (:foreground ,base :background ,err :inherit bold :underline t))))
 
    `(flycheck-error-list-checker-name
      ((,madhat2r-class (:foreground ,keyword))
@@ -843,14 +843,14 @@
       (,madhat2r-term-class (:foreground ,war-term :inherit bold))))
 
    `(flycheck-info
-            ((,(append '((supports :underline (:style line))) class)
+            ((,(append '((supports :underline (:style line))) madhat2r-class)
             (:underline (:style line :color ,keyword)))
-              (,class (:foreground ,base :background ,keyword :inherit bold :underline t))))
+              (,madhat2r-class (:foreground ,base :background ,keyword :inherit bold :underline t))))
 
    `(flycheck-warning
-            ((,(append '((supports :underline (:style line))) class)
+            ((,(append '((supports :underline (:style line))) madhat2r-class)
             (:underline (:style line :color ,war)))
-              (,class (:foreground ,base :background ,war :inherit bold :underline t))))
+              (,madhat2r-class (:foreground ,base :background ,war :inherit bold :underline t))))
 
    ;;;;; jabber
 
