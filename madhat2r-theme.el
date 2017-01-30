@@ -40,11 +40,6 @@
   "Madhat2r-theme options."
   :group 'faces)
 
-(defcustom madhat2r-theme-comment-bg nil
-  "Use a background for comment lines."
-  :type 'boolean
-  :group 'madhat2r-theme)
-
 (defcustom madhat2r-theme-org-agenda-height t
   "Use varying text heights for org agenda."
   :type 'boolean
@@ -57,7 +52,7 @@
 
 
 (defcustom madhat2r-theme-custom-colors nil
-  "Specify a list of custom colors"
+  "Specify a list of custom colors."
   :type 'alist
   :group 'madhat2r-theme)
 
@@ -71,7 +66,7 @@
   (mapcar (lambda (x) (list (car x) (cdr x)))
           madhat2r-theme-custom-colors))
 
-(defun create-madhat2r-theme ()
+(defun madhat2r-create-theme ()
   (madhat2r-dyn-let ((class '((class color) (min-colors 89)))
         ;;                                            GUI       TER
         ;; generic
@@ -654,7 +649,6 @@
      `(spaceline-flycheck-info   ((,class (:foreground ,keyword))))
      `(spaceline-flycheck-warning((,class (:foreground ,war))))
 
-     dotspacemacs-use-ido nil
 ;;;;; spacemacs-specific
      `(spacemacs-transient-state-title-face ((,class (:background nil :foreground ,keyword :box nil :inherit bold))))
 
@@ -754,10 +748,10 @@
 
 (deftheme madhat2r "Madhat2r theme")
 
-(create-madhat2r-theme)
+(madhat2r-create-theme)
 
-;;;###autoload
-(provide-theme 'madhat2r)
+;; ;;;###autoload
+;; (provide-theme 'madhat2r)
 
 ;; Local Variables:
 ;; no-byte-compile: t
