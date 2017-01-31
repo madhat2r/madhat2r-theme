@@ -1,6 +1,6 @@
 #+TITLE: MaDhAt2r Theme
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="../../../css/readtheorg.css" />
-
+[[https://melpa.org/#/madhat2r-theme][file:https://melpa.org/packages/madhat2r-theme-badge.svg]] [[https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg]]
 A fairly complete dark theme for (spac[e]macs), works well with 256 color terminals.
 
 * Screenshots
