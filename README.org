@@ -1,14 +1,33 @@
 #+TITLE: MaDhAt2r Theme
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="../../../css/readtheorg.css" />
 [[https://melpa.org/#/madhat2r-theme][file:https://melpa.org/packages/madhat2r-theme-badge.svg]] [[https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg]]
+
 A fairly complete dark theme for (spac[e]macs), works well with 256 color terminals.
 
+* Contents                                                              :TOC:
+ - [[#installation][Installation]]
+ - [[#screenshots][Screenshots]]
+     - [[#code][Code]]
+     - [[#org-mode][Org-Mode]]
+     - [[#magit][Magit]]
+ - [[#terminal-info][Terminal Info]]
+   - [[#termite][Termite]]
+   - [[#urvxt][(u)RVXT]]
+   - [[#matching-colors-for-ls][Matching Colors for LS]]
+
+* Installation 
+You can install it from MELPA by:
+
+#+BEGIN_SRC
+M-x package-install RET madhat2r-theme
+#+END_SRC
 * Screenshots
 *** Code
 [[file:madhat2r-code.png]]
 *** Org-Mode
 [[file:madhat2r-org.png]]
-
+*** Magit
+[[file:madhat2r-magit.png]]
 * Terminal Info
 
 In order for terminal version to look good, use the following colors. There is also matching colors for LS.
