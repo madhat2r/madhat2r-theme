@@ -10,10 +10,14 @@ A fairly complete dark theme for (spac[e]macs), works well with 256 color termin
      - [[#code][Code]]
      - [[#org-mode][Org-Mode]]
      - [[#magit][Magit]]
+ - [[#supported-modes][Supported modes]]
+ - [[#customizations][Customizations]]
+   - [[#override-themes-colors][Override theme's colors]]
  - [[#terminal-info][Terminal Info]]
    - [[#termite][Termite]]
    - [[#urvxt][(u)RVXT]]
    - [[#matching-colors-for-ls][Matching Colors for LS]]
+ - [[#acknowledgments][Acknowledgments]]
 
 * Installation 
 You can install it from MELPA by:
@@ -28,6 +32,135 @@ M-x package-install RET madhat2r-theme
 [[file:madhat2r-org.png]]
 *** Magit
 [[file:madhat2r-magit.png]]
+
+* Supported modes
+
+Some of the supported modes are:
+
+- avy
+- cider
+- company
+- ein
+- erc
+- flycheck
+- git-gutter
+- gnus
+- helm
+- ido
+- info
+- ivy
+- jabber
+- magit
+- message-mode
+- neotree
+- notmuch
+- org
+- rainbow-delimiters
+- swiper
+
+... and more
+
+if you find one missing that you want, please send a PR
+
+* Customizations
+
+The theme has some options that can be tweaked via ~M-x customize~:
+
+- ~madhat2r-theme-org-agenda-height~ :: This toggles the use of varying org agenda heights.
+
+- ~madhat2r-theme-org-height~ :: This toggles the use of varying org headings heights.
+
+- ~madhat2r-theme-custom-colors~ :: This allows for specifying a list of custom colors to override madhat2r 
+theme colors. More details in the next section.
+
+** Override theme's colors
+
+The theme can be customized by overriding one of the theme local variables by
+setting a list in the ~madhat2r-theme-custom-colors~ variable. Here's a list of
+all the local variables and roles:
+
+Note: all these variables have a term counter part which effects the terminal
+version of this theme. These vars are suffixed with ~-term~ so for example if
+you want to change the background on the terminal you would use ~bg1-term~.
+
+| var           | role                                                                               |
+|---------------+------------------------------------------------------------------------------------|
+| act1          | One of mode-line's active colors.                                                  |
+| act2          | The other active color of mode-line.                                               |
+| base          | The basic color of normal text.                                                    |
+| base-dim      | A dimmer version of the normal text color.                                         |
+| bg1           | The background color.                                                              |
+| bg2           | A darker background color. Used to highlight current line.                         |
+| bg3           | Yet another darker shade of the background color.                                  |
+| bg4           | The darkest background color.                                                      |
+| border        | A border line color. Used in mode-line borders.                                    |
+| cblk          | A code block color. Used in org's code blocks.                                     |
+| cblk-bg       | The background color of a code block.                                              |
+| cblk-ln       | A code block header line.                                                          |
+| cblk-ln-bg    | The background of a code block header line.                                        |
+| cursor        | The cursor/point color.                                                            |
+| const         | A constant.                                                                        |
+| comment       | A comment.                                                                         |
+| comment-bg    | This adds contrast to comments in certain modes. Does not effect in-code comments. |
+| comp          | A complementary color.                                                             |
+| err           | errors.                                                                            |
+| func          | functions.                                                                         |
+| head1         | Level 1 of a heading. Used in org's/markdown headings and other various places.    |
+| head2         | Level 2 headings.                                                                  |
+| head3         | Level 3 headings.                                                                  |
+| head4         | Level 4 headings.                                                                  |
+| highlight     | A highlighted area.                                                                |
+| highlight-dim | A dimmer highlighted area.                                                         |
+| keyword       | A keyword or a builtin color.                                                      |
+| lnum          | Line numbers.                                                                      |
+| mat           | A matched color. Used in matching parens, brackets and tags.                       |
+| meta          | A meta line. Used in org's meta line.                                              |
+| str           | A string.                                                                          |
+| suc           | To indicate success. Opposite of error.                                            |
+| ttip          | Tooltip color.                                                                     |
+| ttip-sl       | Tooltip selection color.                                                           |
+| ttip-bg       | Tooltip background color.                                                          |
+| type          | A type color.                                                                      |
+| var           | A variable color.                                                                  |
+| war           | A warning color.                                                                   |
+
+
+There is also explicit colors variables that can be customized: (these also have a ~-term~ version)
+
+- aqua
+- aqua-bg
+- green
+- green-bg
+- green-bg-s
+- cyan
+- red
+- red-bg
+- red-bg-s
+- blue
+- blue-bg
+- violet
+- yellow
+- yellow-bg
+
+The ~green~ and ~red~ colors have two background versions. The ~green-bg~ and
+~red-bg~ are normal light background colors. The ~green-bg-s~ and ~red-bg-s~ are
+a stronger version and are used in ~ediff~ and places were text is added or
+deleted.
+
+To override colors, add this to your ~init.el~ file
+
+#+BEGIN_SRC emacs-lisp
+  (custom-set-variables '(madhat2r-theme-custom-colors
+                          '((act1 . "#ff0000")
+                            (act1-term . "#000aff")
+                            (act2 . "#0000ff")
+                            (act2-term . "#a000ff")
+                            (base . "#ffffff"))))
+#+END_SRC
+
+This will override ~act1~, ~act1~ and ~base~ to use the specified colors; and
+the ~-term~ versions will effect the terminal version.
+
 * Terminal Info
 
 In order for terminal version to look good, use the following colors. There is also matching colors for LS.
@@ -142,3 +275,12 @@ Insert into your bash/zsh rc file
 LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=35;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=33:*.jpeg=33:*.gif=33:*.bmp=33:*.pbm=33:*.pgm=33:*.ppm=33:*.tga=33:*.xbm=33:*.xpm=33:*.tif=33:*.tiff=33:*.png=33:*.svg=33:*.svgz=33:*.mng=33:*.pcx=33:*.mov=33:*.mpg=33:*.mpeg=33:*.m2v=33:*.mkv=33:*.webm=33:*.ogm=33:*.mp4=33:*.m4v=33:*.mp4v=33:*.vob=33:*.qt=33:*.nuv=33:*.wmv=33:*.asf=33:*.rm=33:*.rmvb=33:*.flc=33:*.avi=33:*.fli=33:*.flv=33:*.gl=33:*.dl=33:*.xcf=33:*.xwd=33:*.yuv=33:*.cgm=33:*.emf=33:*.ogv=33:*.ogx=33:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*.org=45;36:*.log=30';
 export LS_COLORS
 #+END_SRC
+
+* Acknowledgments 
+
+I used the wonderful [[https://github.com/nashamri/spacemacs-theme][spacemacs-theme]] by nashamri as the skeleton for this theme.
+If you want to see examples of what the customization vars look like in action,
+nashamri has wonderfully illustrated graphics showing exactly what most colors
+apply to.
+
+Also, you really should give his theme a try, it is wonderfully crafted.
