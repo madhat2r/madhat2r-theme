@@ -522,8 +522,8 @@
       (,madhat2r-term-class (:foreground ,const-term))))
 
    `(company-tooltip-selection
-     ((,madhat2r-class (:background ,bg1 :foreground ,base))
-      (,madhat2r-term-class (:background ,bg1-term :foreground ,base-term))))
+     ((,madhat2r-class (:background ,lnum :foreground ,base))
+      (,madhat2r-term-class (:background ,lnum-term :foreground ,base-term))))
 
    ;;;;; diff
 
