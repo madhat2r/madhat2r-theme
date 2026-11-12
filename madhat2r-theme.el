@@ -1,4 +1,4 @@
-;;; madhat2r-theme.el --- dark color theme that is easy on the eyes
+;;; madhat2r-theme.el --- Dark color theme that is easy on the eyes -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2015-2016 Micah Duke
 
@@ -26,6 +26,8 @@
 
 ;;; Commentary:
 
+;; Dark color theme that is easy on the eyes.
+
 ;;; Credits:
 
 ;; Thanks to Nasser Alshammari of the Spacemacs Theme which was used as the skeleton:
@@ -33,9 +35,7 @@
 
 ;;; Code:
 
-(deftheme madhat2r "Madhat2r theme")
-;; (defmacro madhat2r-dyn-let (varlist fn setfaces setvars)
-;;   (list 'let (append varlist (funcall fn)) setfaces setvars))
+(deftheme madhat2r "Madhat2r theme.")
 
 (defgroup madhat2r-theme nil
   "Madhat2r-theme options."
@@ -59,6 +59,7 @@
 
 
 (defun madhat2r-custom-colors-override ()
+  "Apply all overrides from `madhat2r-theme-custom-colors'."
   (mapcar (lambda (x) (list (car x) (cdr x)))
           madhat2r-theme-custom-colors))
 
