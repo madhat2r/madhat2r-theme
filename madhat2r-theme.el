@@ -33,9 +33,7 @@
 
 ;;; Code:
 
-(deftheme madhat2r "Madhat2r theme")
-;; (defmacro madhat2r-dyn-let (varlist fn setfaces setvars)
-;;   (list 'let (append varlist (funcall fn)) setfaces setvars))
+(deftheme madhat2r "Madhat2r theme.")
 
 (defgroup madhat2r-theme nil
   "Madhat2r-theme options."
@@ -59,6 +57,7 @@
 
 
 (defun madhat2r-custom-colors-override ()
+  "Apply all overrides from `madhat2r-theme-custom-colors'."
   (mapcar (lambda (x) (list (car x) (cdr x)))
           madhat2r-theme-custom-colors))
 
