@@ -1,4 +1,4 @@
-;;; madhat2r-theme.el --- dark color theme that is easy on the eyes
+;;; madhat2r-theme.el --- dark color theme that is easy on the eyes -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2015-2016 Micah Duke
 
