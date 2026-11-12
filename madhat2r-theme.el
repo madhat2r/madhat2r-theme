@@ -1,4 +1,4 @@
-;;; madhat2r-theme.el --- dark color theme that is easy on the eyes -*- lexical-binding: t -*-
+;;; madhat2r-theme.el --- Dark color theme that is easy on the eyes -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2015-2016 Micah Duke
 
@@ -25,6 +25,8 @@
 ;; This file is not part of Emacs.
 
 ;;; Commentary:
+
+;; Dark color theme that is easy on the eyes.
 
 ;;; Credits:
 
